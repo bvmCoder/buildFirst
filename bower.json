@@ -1,0 +1,25 @@
+{
+  "name": "buildfirst",
+  "description": "Simple Trading Application",
+  "main": "index.js",
+  "authors": [
+    "Dixit Patel"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0"
+    "jquery": "^2.2.0",
+    "angular": "^1.4.9",
+    "angular-route": "^1.4.9",
+  }
+}
