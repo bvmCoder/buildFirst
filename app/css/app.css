@@ -1,0 +1,171 @@
+body {
+    font-size: 14px;
+    font-family: 'sans-serif';
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+button {
+    width: 130px;
+    background: #F47621;
+    border: none;
+    font-family: 'sans-serif';
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+button + button {
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+
+/* Header */
+
+#header {
+    display: flex;
+    background: orange;
+    padding: 30px 20px;
+}
+
+#header hgroup h1,
+h2 {
+    margin: 0;
+}
+
+#header hgroup h1 {
+    font-size: 24px;
+}
+
+#header hgroup h2 {
+    margin: 8px 5px 0 0;
+    text-align: right;
+    font: italic 600 16px 'sans-serif';
+}
+
+#header #logo {
+    background-image: url('../images/logo.png');
+    height: 93px;
+    width: 194px;
+}
+
+#header #logo h1 {
+    margin: 3px 0;
+}
+
+#header #logo .subtitle {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+#header .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header .actions button {
+    background-color: #EF4423;
+    font-weight: bold;
+    height: 100px;
+}
+
+#header .actions button i {
+    display: block;
+    font-size: 1.5rem;
+}
+
+#content {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+/* Left Section */
+
+.left-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.left-section .header {
+    display: flex;
+    height: 30px;
+}
+
+.left-section .header strong {
+    font-size: 1.3rem;
+}
+
+.left-section .header button {
+    height: 25px;
+}
+
+.left-section .header > .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+table th {
+    background: #9D9FA2;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+table th i {
+    color: orange;
+}
+
+table th:last-of-type {
+    cursor: default;
+}
+
+.totals td {
+    border-top: 3px solid #ccc;
+}
+
+.legend {
+    width: 30px;
+    height: 16px;
+}
+
+
+/* Right Section */
+
+.right-section {
+    width: 300px;
+    background: #ccc;
+    margin-top: 2.3em;
+    padding: 10px;
+}
+
+.right-section .chart-header {
+    font-weight: bold;
+}
+
+.right-section .chart {
+    height: 300px;
+}
+
+.right-section .help-label {
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+}
