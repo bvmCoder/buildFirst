@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dixit Patel">
+    <title>Build First Trade Application</title>
+    <link rel="stylesheet" type='text/css' href="./app/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" type='text/css' href="./app/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./app/css/app.css" />
+</head>
+
+<body ng-app="buildFirst">
+    <div id="header">
+        <hgroup>
+            <h1 id="logo"></h1>
+            <h2 class="subtitle">Calling All Bull Markets</h2>
+        </hgroup>
+        <div class="actions">
+            <button>
+                <i class="fa fa-star-o"></i>
+                <span>Trade</span>
+            </button>
+            <button>
+                <i class="fa fa-sign-out"></i>
+                <span>Transfer</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="content" ng-controller="controllerAccount as ca">
+        <div class="left-section">
+            <div class="header">
+                <span><strong>Accounts</strong></span>
+
+                <div class="actions">
+                    <button ng-click="ca.addAccount();">
+                        <i class="fa fa-plus-circle"></i> Add Account
+                    </button>
+                    <button ng-click="ca.refresh();">
+                        <i class="fa fa-refresh"></i> Refresh
+                    </button>
+                </div>
+            </div>
+            <table id="pngTable">
+                <tr>
+                    <th ng-click="ca.orderBy('name');toggleOrderRev()">
+                        <i class="fa" ng-class="'fa-caret-' + (ca.orderReversed ? 'down' : 'up')" ng-show="ca.orderByKeyword=='name'"></i> Name
+                    </th>
+                    <th ng-click="ca.orderBy('marketValue');toggleOrderRev()">
+                        <i class="fa" ng-class="'fa-caret-' + (ca.orderReversed ? 'down' : 'up')" ng-show="ca.orderByKeyword=='marketValue'"></i> Market Value
+                    </th>
+                    <th ng-click="ca.orderBy('cash');toggleOrderRev()">
+                        <i class="fa" ng-class="'fa-caret-' + (ca.orderReversed ? 'down' : 'up')" ng-show="ca.orderByKeyword=='cash'"></i> Cash
+                    </th>
+                    <th>Legend</th>
+                </tr>
+
+                <tr ng-repeat="row in ca.rows | orderBy:orderByKeyword:orderReversed" ng-click="ca.selectRow(row._cuuid)">
+
+                    <td ng-bind="row.name"></td>
+                    <td ng-bind="row.marketValue | currency"></td>
+                    <td ng-bind="row.cash | currency"></td>
+                    <td>
+                        <div class="legend" style="background-color: {{ row.legend }}"></div>
+                    </td>
+                </tr>
+
+                <tr class="totals">
+                    <td></td>
+                    <td>
+                        <strong ng-bind="totals.marketValue | currency"></strong>
+                    </td>
+                    <td>
+                        <strong ng-bind="totals.cash | currency"></strong>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="right-section">
+            <div class="chart-header">All Accounts</div>
+            <div class="chart" market-pie></div>
+            <div class="help-label">Click on an account to view positions</div>
+        </div>
+
+    </div>
+    <script src="./app/bower_components/jquery/dist/jquery.js"></script>
+    <script src="./app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./app/bower_components/angular/angular.js"></script>
+    <script src="./app/bower_components/angular-route/angular-route.js"></script>
+    <script src="./app/js/app.js"></script>
+    <script src="./app/accounts/serviceAccount.js"></script>
+    <script src="./app/accounts/controllerAccount.js"></script>
+</body>
+
+</html>
