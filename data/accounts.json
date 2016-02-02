@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Brokerage Account 3",
+        "marketValue": 1999990,
+        "cash": 1995826
+  },
+    {
+        "name": "Account 3",
+        "marketValue": 1948954,
+        "cash": 1936954
+  },
+    {
+        "name": "Brokerage Account 1",
+        "marketValue": 715384,
+        "cash": 16609
+  },
+    {
+        "name": "Brokerage Account 4",
+        "marketValue": 160000,
+        "cash": 160000
+  },
+    {
+        "name": "Brokerage Account 2",
+        "marketValue": 74440,
+        "cash": 19970
+  },
+    {
+        "name": "Account 4",
+        "marketValue": 55006,
+        "cash": 53006
+  },
+    {
+        "name": "Account 13",
+        "marketValue": 37340,
+        "cash": 0
+  },
+    {
+        "name": "Joint Account 1",
+        "marketValue": 28308,
+        "cash": 4167
+  },
+    {
+        "name": "Joint Account 3",
+        "marketValue": 10000,
+        "cash": 10000
+  },
+    {
+        "name": "Joint Account 2",
+        "marketValue": 0,
+        "cash": 0
+  }
+]
